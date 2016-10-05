@@ -9,6 +9,11 @@
             "email": "stephen@e508.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "SitePoint\\": "src"
+        }
+    },
     "require": {
         "catfan/medoo": "^1.1"
     },

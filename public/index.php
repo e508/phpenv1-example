@@ -11,6 +11,12 @@ $database = new medoo([
 ]);
 //dump($database);
 
+$comment = new SitePoint\Comment($database);
+$comment->setEmail('bruno@skvorc.me')
+->setName('Bruno Skvorc')
+->setComment('Hooray! Saving comments works!')
+->save();
+
 ?>
 
 <!doctype html>
