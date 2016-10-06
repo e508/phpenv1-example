@@ -5,9 +5,13 @@ require_once '../vendor/autoload.php';
 //var_dump($array);
 //dump($array);
 
+$file = '../storage/database.db';
+if (is_writable('../storage/dev.database.db')) {
+    $file = '../storage/dev.database.db';
+}
 $database = new medoo([
-'database_type' => 'sqlite',
-'database_file' => '../storage/database.db'
+    'database_type' => 'sqlite',
+    'database_file' => $file
 ]);
 //dump($database);
 
